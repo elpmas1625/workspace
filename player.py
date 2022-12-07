@@ -9,7 +9,7 @@ class Player(User):
             handNum = int(input("choose ur hand!   ROCK : 1  SCISSORS : 2  PAPER : 3  : "))
 
             if handNum < 1 or 3 < handNum:
-                print("IndexError /n pls enter 1, 2 or 3")
+                print("IndexError ", "pls enter 1, 2 or 3")
                 continue
 
             break

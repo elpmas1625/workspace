@@ -10,7 +10,7 @@ class Janken:
     def start(self):
         pName = input("Enter your name : ")
         # Playerクラスからインスタンスを生成してみよう．(ヒント：下のCpuクラスの場合を参考に)
-        player = Player(pName)
+        # player = 
 
         # Cpuクラスからcpuインスタンスを生成
         cpu = Cpu("CPU")
