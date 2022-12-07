@@ -37,9 +37,16 @@ class Janken:
 
             print("player_win : " , player.win, "cpu_win : ", cpu.win)
 
-            # 入力値に ".lower()" を使用している理由を考えよう．下の"A."に追記しよう．(ヒント：入力者に対する配慮)
-            # A.
-            if input("Continue? [Y/n]: ").lower() == 'n':
-                exit()
+
+            while True:
+                # 入力値に ".lower()" を使用している理由を考えよう．下の"A."に追記しよう．(ヒント：入力者に対する配慮)
+                # A.
+                cont = input("Continue? [Y/n]: ").lower()
+                if cont == 'n':
+                    exit()
+                elif cont == 'y':
+                    break
+                else:
+                    print("pls enter 'y' or 'n'")
 
             print("===================================================")
