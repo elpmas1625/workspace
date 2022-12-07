@@ -2,14 +2,17 @@ from player import *
 from cpu import *
 from hand import *
 
-cnt = 0
 
 class Janken:
     def __init__(self):
         pass
 
     def start(self):
-        player = Player(input("Enter your name : "))
+        pName = input("Enter your name : ")
+        # Playerクラスからインスタンスを生成してみよう．(ヒント：下のCpuクラスの場合を参考に)
+        player = Player()
+
+        # Cpuクラスからcpuインスタンスを生成
         cpu = Cpu("CPU")
 
         while True:
@@ -24,16 +27,19 @@ class Janken:
             cpu.show_hand()
 
             if pHand.winTo(cHand):
-                print("you win")
+                print("YOU WIN!")
                 player.win_count()
             elif cHand.winTo(pHand):
-                print("you lose")
+                print("YOU LOSE...")
                 cpu.win_count()
             else:
-                print("aiko")
+                print("Draw!")
 
             print("player_win : " , player.win, "cpu_win : ", cpu.win)
+
+            # 入力値に ".lower()" を使用している理由を考えよう．下の"A."に追記しよう．(ヒント：入力者に対する配慮)
+            # A.
             if input("Continue? [Y/n]: ").lower() == 'n':
                 exit()
 
-
+            print("===================================================")
